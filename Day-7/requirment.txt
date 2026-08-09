@@ -1,0 +1,9 @@
+# react project install cmd:
+npm create vite@latest
+      | |
+       ^
+✔ Project name: » my-app
+✔ Select a framework: » React
+✔ Select a variant: » JavaScript (or TypeScript)
+
+rffc shortcut to make component 

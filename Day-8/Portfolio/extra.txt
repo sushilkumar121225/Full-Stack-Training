@@ -1,0 +1,1549 @@
+import React from "react";
+import "./Portfolio.css";
+
+import profileImage from "../assets/images/profile.png";
+
+function Portfolio() {
+  const skills = {
+    languages: ["C", "Java", "Python", "Kotlin", "JavaScript"],
+    web: ["HTML", "CSS", "JavaScript", "ReactJS", "Node.js", "JSP", "Servlets"],
+    databases: ["MySQL", "MongoDB", "SQLite", "PostgreSQL"],
+    knowledge: ["Data Structures & Algorithms", "SQL"],
+  };
+
+  const projects = [
+    {
+      title: "Digital Banking System",
+      description:
+        "A secure banking application that allows users to create accounts, check balances, transfer funds, and manage transactions.",
+      tech: "Java",
+    },
+    {
+      title: "Color Dot Matching Game",
+      description:
+        "An interactive web-based game where players match colored dots under time constraints, helping improve hand-eye coordination and quick thinking.",
+      tech: "Web Development",
+    },
+    {
+      title: "Science Learning Website",
+      description:
+        "A responsive educational website offering interactive science tutorials, quizzes, facts, simulations, and animations to make science learning fun and engaging.",
+      tech: "HTML • CSS • JavaScript",
+    },
+    {
+      title: "Rural Handmade Products",
+      description:
+        "An e-commerce platform to promote and sell handmade products from rural artisans, with product management and order handling powered by a Python backend.",
+      tech: "Python • E-Commerce",
+    },
+    {
+      title: "Movie Ticket Bookings",
+      description:
+        "A dynamic web application where users can browse movies, view showtimes, book tickets, select seats, receive e-tickets, and complete UPI payments.",
+      tech: "Web Development",
+    },
+    {
+      title: "Book Purchase Cart",
+      description:
+        "An online bookstore platform that allows users to browse books, add items to a cart, and purchase using a secure checkout system.",
+      tech: "Web Development",
+    },
+    {
+      title: "QR Craft All in One",
+      description:
+        "An Android application designed to generate and scan QR codes and barcodes with an elegant user interface and fast performance.",
+      tech: "Android • Kotlin",
+    },
+    {
+      title: "StudentTrack Web Application",
+      description:
+        "A role-based Student Information System developed using ASP.NET Web Forms with C# and SQL Server.",
+      tech: "ASP.NET • C# • SQL Server",
+    },
+  ];
+
+  const certificates = [
+    "API Postman",
+    "Python for Data Science",
+    "Database and SQL",
+    "Linux Essentials",
+    "CCNA Computer Network",
+    "AWS AI/ML Event",
+    "Data Science Essentials with Python",
+    "IDEA 2025: Project Showcasing",
+    "Explore Machine Learning using Python",
+    "Remote Sensing & Digital Image Analysis",
+  ];
+
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <div className="portfolio">
+
+      {/* ================= NAVBAR ================= */}
+      <header className="navbar">
+        <div className="nav-container">
+          <a
+            href="#home"
+            className="logo"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("home");
+            }}
+          >
+            SK<span>.</span>
+          </a>
+
+          <nav className="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <a
+            href="mailto:sushilkumar.121225@marwadiuniversity.ac.in"
+            className="nav-button"
+          >
+            Let's Talk
+          </a>
+        </div>
+      </header>
+
+      {/* ================= HERO ================= */}
+      <section id="home" className="hero">
+        <div className="hero-container">
+
+          <div className="hero-content">
+            <p className="hero-small-text">
+              HELLO, I'M
+            </p>
+
+            <h1>
+              Sushil <span>Kumar</span>
+            </h1>
+
+            <h2>
+              Computer Engineering Student & <br />
+              <span>Software Developer</span>
+            </h2>
+
+            <p className="hero-description">
+              Motivated computer engineering student passionate about
+              programming, web development, data analytics, and building
+              innovative technology solutions.
+            </p>
+
+            <div className="hero-buttons">
+              <button
+                className="primary-button"
+                onClick={() => scrollToSection("projects")}
+              >
+                View My Work →
+              </button>
+
+              <a
+                href="mailto:sushilkumar.121225@marwadiuniversity.ac.in"
+                className="secondary-button"
+              >
+                Contact Me
+              </a>
+            </div>
+
+            <div className="social-links">
+              <a
+                href="https://www.linkedin.com/in/sushil-kumar-471614289"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+
+              <a
+                href="https://github.com/sushilkumar121225"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div className="hero-image-container">
+            <div className="image-background"></div>
+
+            <img
+              src={profileImage}
+              alt="Sushil Kumar"
+              className="profile-image"
+            />
+
+            <div className="floating-card card-one">
+              <strong>8+</strong>
+              <span>Projects</span>
+            </div>
+
+            <div className="floating-card card-two">
+              <strong>10+</strong>
+              <span>Certificates</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================= ABOUT ================= */}
+      <section id="about" className="section about-section">
+        <div className="section-heading">
+          <p>ABOUT ME</p>
+          <h2>Building solutions with <span>technology</span></h2>
+        </div>
+
+        <div className="about-grid">
+
+          <div className="about-text">
+            <p>
+              I am a Computer Engineering student at Marwadi University,
+              Rajkot, Gujarat. I enjoy learning new technologies, solving
+              programming problems, and developing useful software
+              applications.
+            </p>
+
+            <p>
+              My technical interests include software development,
+              web development, databases, data analytics, and modern
+              application development.
+            </p>
+
+            <p>
+              I am looking for opportunities where I can apply my
+              programming and problem-solving skills while continuing
+              to grow as a technology professional.
+            </p>
+          </div>
+
+          <div className="education-card">
+            <span className="card-label">EDUCATION</span>
+
+            <h3>Marwadi University</h3>
+
+            <h4>Bachelor of Technology</h4>
+
+            <p>Computer Engineering</p>
+
+            <div className="education-info">
+              <span>📍 Rajkot, Gujarat</span>
+              <span>📅 July 2023 – Present</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================= SKILLS ================= */}
+      <section id="skills" className="section skills-section">
+        <div className="section-heading">
+          <p>MY EXPERTISE</p>
+          <h2>Technical <span>Skills</span></h2>
+        </div>
+
+        <div className="skills-grid">
+
+          <div className="skill-card">
+            <div className="skill-icon">{"</>"}</div>
+            <h3>Programming Languages</h3>
+
+            <div className="skill-tags">
+              {skills.languages.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="skill-card">
+            <div className="skill-icon">{"◈"}</div>
+            <h3>Web Development</h3>
+
+            <div className="skill-tags">
+              {skills.web.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="skill-card">
+            <div className="skill-icon">{"▣"}</div>
+            <h3>Databases</h3>
+
+            <div className="skill-tags">
+              {skills.databases.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="skill-card">
+            <div className="skill-icon">{"⌘"}</div>
+            <h3>Technical Knowledge</h3>
+
+            <div className="skill-tags">
+              {skills.knowledge.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================= PROJECTS ================= */}
+      <section id="projects" className="section projects-section">
+        <div className="section-heading">
+          <p>MY WORK</p>
+          <h2>Featured <span>Projects</span></h2>
+        </div>
+
+        <div className="projects-grid">
+
+          {projects.map((project, index) => (
+            <article className="project-card" key={project.title}>
+
+              <div className="project-number">
+                {String(index + 1).padStart(2, "0")}
+              </div>
+
+              <div className="project-content">
+                <span className="project-tech">
+                  {project.tech}
+                </span>
+
+                <h3>{project.title}</h3>
+
+                <p>{project.description}</p>
+
+                <a href="#contact">
+                  Discuss Project →
+                </a>
+              </div>
+
+            </article>
+          ))}
+
+        </div>
+      </section>
+
+      {/* ================= CERTIFICATES ================= */}
+      <section id="certificates" className="section certificates-section">
+        <div className="section-heading">
+          <p>ACHIEVEMENTS</p>
+          <h2>Certificates & <span>Learning</span></h2>
+        </div>
+
+        <div className="certificate-grid">
+
+          {certificates.map((certificate, index) => (
+            <div className="certificate-card" key={certificate}>
+
+              <div className="certificate-number">
+                {String(index + 1).padStart(2, "0")}
+              </div>
+
+              <div>
+                <h3>{certificate}</h3>
+                <p>Professional Learning</p>
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+      </section>
+
+      {/* ================= CONTACT ================= */}
+      <section id="contact" className="contact-section">
+
+        <div className="contact-container">
+
+          <div className="contact-content">
+
+            <p className="contact-label">GET IN TOUCH</p>
+
+            <h2>
+              Let's build something
+              <span> great together.</span>
+            </h2>
+
+            <p>
+              I am open to internships, projects, and opportunities where
+              I can contribute my technical skills and continue learning.
+            </p>
+
+            <a
+              href="mailto:sushilkumar.121225@marwadiuniversity.ac.in"
+              className="email-link"
+            >
+              sushilkumar.121225@marwadiuniversity.ac.in
+            </a>
+
+            <div className="contact-socials">
+
+              <a
+                href="https://www.linkedin.com/in/sushil-kumar-471614289"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn ↗
+              </a>
+
+              <a
+                href="https://github.com/sushilkumar121225"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+          <div className="contact-card">
+
+            <div className="contact-icon">✉</div>
+
+            <h3>Have a project in mind?</h3>
+
+            <p>
+              Feel free to reach out and let's discuss how we can work
+              together.
+            </p>
+
+            <a
+              href="mailto:sushilkumar.121225@marwadiuniversity.ac.in"
+              className="contact-button"
+            >
+              Send an Email →
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ================= FOOTER ================= */}
+      <footer className="footer">
+
+        <div className="footer-container">
+
+          <div>
+            <h3>SK<span>.</span></h3>
+            <p>
+              Computer Engineering Student & Software Developer
+            </p>
+          </div>
+
+          <p>
+            © {new Date().getFullYear()} Sushil Kumar. All Rights Reserved.
+          </p>
+
+          <a href="#home">
+            Back to top ↑
+          </a>
+
+        </div>
+
+      </footer>
+
+    </div>
+  );
+}
+
+export default Portfolio;
+
+
+--------------------------------------------
+CSS
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  background: #0a0a0a;
+  color: #f5f5f5;
+
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+.portfolio {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(255, 110, 45, 0.08),
+      transparent 25%
+    ),
+    #0a0a0a;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  background: rgba(10, 10, 10, 0.88);
+
+  backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.nav-container {
+  width: min(1200px, 92%);
+
+  height: 75px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.logo span,
+.footer h3 span {
+  color: #ff6b35;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #bdbdbd;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6b35;
+}
+
+.nav-button {
+  padding: 11px 20px;
+
+  border: 1px solid #ff6b35;
+  border-radius: 5px;
+
+  color: #ff6b35;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.nav-button:hover {
+  background: #ff6b35;
+  color: #000;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 0 70px;
+}
+
+.hero-container {
+  width: min(1200px, 92%);
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 70px;
+}
+
+.hero-small-text,
+.section-heading p,
+.contact-label {
+  color: #ff6b35;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 7vw, 92px);
+
+  line-height: 0.95;
+
+  letter-spacing: -5px;
+
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #ff6b35;
+}
+
+.hero h2 {
+  font-size: 28px;
+
+  line-height: 1.25;
+
+  color: #d6d6d6;
+
+  margin-bottom: 22px;
+}
+
+.hero h2 span {
+  color: #ff6b35;
+}
+
+.hero-description {
+  max-width: 600px;
+
+  color: #999;
+
+  line-height: 1.8;
+
+  font-size: 16px;
+
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 35px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 0 25px;
+
+  border-radius: 5px;
+
+  font-weight: 700;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.primary-button {
+  border: none;
+
+  background: #ff6b35;
+  color: #050505;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 30px rgba(255, 107, 53, 0.25);
+}
+
+.secondary-button {
+  border: 1px solid #333;
+
+  color: #fff;
+
+  background: transparent;
+}
+
+.secondary-button:hover {
+  border-color: #ff6b35;
+
+  color: #ff6b35;
+}
+
+.social-links {
+  display: flex;
+
+  gap: 25px;
+}
+
+.social-links a {
+  color: #777;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #ff6b35;
+}
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero-image-container {
+  position: relative;
+
+  min-height: 520px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.image-background {
+  position: absolute;
+
+  width: 390px;
+  height: 390px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 107, 53, 0.3),
+      rgba(255, 107, 53, 0.04) 65%,
+      transparent 70%
+    );
+
+  filter: blur(5px);
+}
+
+.profile-image {
+  position: relative;
+
+  z-index: 2;
+
+  width: 350px;
+  height: 420px;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border-radius: 180px 180px 25px 25px;
+
+  border: 1px solid rgba(255, 107, 53, 0.35);
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.6),
+    0 0 50px rgba(255, 107, 53, 0.12);
+}
+
+.floating-card {
+  position: absolute;
+
+  z-index: 3;
+
+  padding: 15px 20px;
+
+  background: rgba(20, 20, 20, 0.92);
+
+  border: 1px solid #292929;
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.floating-card strong {
+  color: #ff6b35;
+
+  font-size: 24px;
+}
+
+.floating-card span {
+  color: #888;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.card-one {
+  left: 5%;
+  bottom: 75px;
+}
+
+.card-two {
+  right: 0;
+  top: 90px;
+}
+
+/* =========================================
+   COMMON SECTION
+========================================= */
+
+.section {
+  width: min(1200px, 92%);
+
+  margin: auto;
+
+  padding: 110px 0;
+}
+
+.section-heading {
+  margin-bottom: 55px;
+}
+
+.section-heading h2 {
+  font-size: clamp(35px, 5vw, 55px);
+
+  letter-spacing: -2px;
+}
+
+.section-heading h2 span {
+  color: #ff6b35;
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.about-text p {
+  color: #999;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+
+  margin-bottom: 22px;
+}
+
+.education-card {
+  padding: 40px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #151515,
+      #0e0e0e
+    );
+
+  border: 1px solid #272727;
+
+  border-radius: 15px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.education-card::after {
+  content: "";
+
+  position: absolute;
+
+  right: -80px;
+  top: -80px;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 107, 53, 0.1);
+}
+
+.card-label {
+  color: #ff6b35;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  font-weight: 800;
+}
+
+.education-card h3 {
+  margin-top: 25px;
+
+  font-size: 30px;
+}
+
+.education-card h4 {
+  margin-top: 8px;
+
+  color: #ddd;
+
+  font-size: 18px;
+}
+
+.education-card > p {
+  color: #888;
+
+  margin-top: 5px;
+}
+
+.education-info {
+  margin-top: 30px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #292929;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  color: #888;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills-section {
+  border-top: 1px solid #151515;
+}
+
+.skills-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.skill-card {
+  padding: 32px;
+
+  background: #101010;
+
+  border: 1px solid #222;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  border-color: rgba(255, 107, 53, 0.45);
+
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 107, 53, 0.1);
+
+  color: #ff6b35;
+
+  border-radius: 10px;
+
+  font-weight: 900;
+
+  margin-bottom: 22px;
+}
+
+.skill-card h3 {
+  margin-bottom: 20px;
+
+  font-size: 20px;
+}
+
+.skill-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.skill-tags span {
+  padding: 7px 12px;
+
+  background: #1a1a1a;
+
+  color: #aaa;
+
+  border: 1px solid #292929;
+
+  border-radius: 5px;
+
+  font-size: 12px;
+}
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.projects-section {
+  border-top: 1px solid #151515;
+}
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.project-card {
+  min-height: 300px;
+
+  padding: 30px;
+
+  background: #101010;
+
+  border: 1px solid #242424;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  gap: 25px;
+
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  border-color: rgba(255, 107, 53, 0.45);
+
+  transform: translateY(-5px);
+}
+
+.project-number {
+  color: #ff6b35;
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  min-width: 30px;
+}
+
+.project-content {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.project-tech {
+  color: #666;
+
+  font-size: 11px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 15px;
+}
+
+.project-content h3 {
+  font-size: 22px;
+
+  margin-bottom: 15px;
+}
+
+.project-content p {
+  color: #888;
+
+  line-height: 1.7;
+
+  font-size: 14px;
+
+  flex: 1;
+}
+
+.project-content a {
+  margin-top: 25px;
+
+  color: #ff6b35;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+/* =========================================
+   CERTIFICATES
+========================================= */
+
+.certificates-section {
+  border-top: 1px solid #151515;
+}
+
+.certificate-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+.certificate-card {
+  padding: 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  background: #101010;
+
+  border: 1px solid #222;
+
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.certificate-card:hover {
+  border-color: rgba(255, 107, 53, 0.45);
+}
+
+.certificate-number {
+  color: #ff6b35;
+
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+.certificate-card h3 {
+  font-size: 15px;
+
+  margin-bottom: 5px;
+}
+
+.certificate-card p {
+  color: #666;
+
+  font-size: 11px;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+  padding: 110px 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(255, 107, 53, 0.12),
+      transparent 40%
+    );
+
+  border-top: 1px solid #151515;
+}
+
+.contact-container {
+  width: min(1200px, 92%);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+.contact-content h2 {
+  font-size: clamp(40px, 5vw, 65px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 25px;
+}
+
+.contact-content h2 span {
+  color: #ff6b35;
+}
+
+.contact-content > p {
+  max-width: 600px;
+
+  color: #888;
+
+  line-height: 1.8;
+
+  margin-bottom: 25px;
+}
+
+.email-link {
+  display: inline-block;
+
+  color: #ff6b35;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  margin-bottom: 30px;
+}
+
+.contact-socials {
+  display: flex;
+
+  gap: 25px;
+}
+
+.contact-socials a {
+  color: #aaa;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.contact-socials a:hover {
+  color: #ff6b35;
+}
+
+.contact-card {
+  padding: 40px;
+
+  background: #121212;
+
+  border: 1px solid #282828;
+
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+.contact-icon {
+  width: 65px;
+  height: 65px;
+
+  margin: auto auto 25px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 107, 53, 0.12);
+
+  color: #ff6b35;
+
+  font-size: 25px;
+}
+
+.contact-card h3 {
+  font-size: 23px;
+
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  margin-bottom: 25px;
+}
+
+.contact-button {
+  display: inline-flex;
+
+  padding: 13px 22px;
+
+  background: #ff6b35;
+
+  color: #050505;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  transition: 0.3s;
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  border-top: 1px solid #1d1d1d;
+
+  padding: 30px 0;
+}
+
+.footer-container {
+  width: min(1200px, 92%);
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.footer h3 {
+  font-size: 24px;
+
+  margin-bottom: 5px;
+}
+
+.footer p {
+  color: #666;
+
+  font-size: 12px;
+}
+
+.footer-container > p {
+  text-align: center;
+}
+
+.footer-container > a {
+  color: #ff6b35;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .hero-content {
+    order: 1;
+  }
+
+  .hero-image-container {
+    order: 0;
+
+    min-height: 430px;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons,
+  .social-links {
+    justify-content: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .nav-button {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 105px;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+
+    letter-spacing: -3px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .hero-image-container {
+    min-height: 370px;
+  }
+
+  .profile-image {
+    width: 270px;
+    height: 330px;
+  }
+
+  .image-background {
+    width: 300px;
+    height: 300px;
+  }
+
+  .floating-card {
+    padding: 10px 14px;
+  }
+
+  .card-one {
+    left: 0;
+    bottom: 25px;
+  }
+
+  .card-two {
+    right: 0;
+    top: 30px;
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+
+  .skills-grid,
+  .projects-grid,
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
+
+  .contact-section {
+    padding: 75px 0;
+  }
+
+  .contact-content h2 {
+    letter-spacing: -2px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+
+    text-align: center;
+  }
+}

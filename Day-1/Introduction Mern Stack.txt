@@ -1,0 +1,304 @@
+MERN Stack is a popular full-stack web development technology stack used to build modern, dynamic, and scalable web applications.
+
+MERN = MongoDB + Express.js + React.js + Node.js
+
+1. What is MERN Stack?
+
+MERN is a combination of four technologies:
+
+Technology		Type					Main Purpose
+MongoDB			Database				Stores application data
+Express.js		Backend framework		Creates APIs and handles HTTP requests
+React.js		Frontend library		Builds user interfaces
+Node.js			Runtime environment		Runs JavaScript on the server
+
+The biggest advantage is that JavaScript is used throughout the application, especially across the frontend and backend.
+
+Simple flow
+             USER
+               ↓
+        React.js Frontend
+               ↓
+        HTTP Request
+               ↓
+       Express.js + Node.js
+               ↓
+          API / Logic
+               ↓
+           MongoDB
+               ↓
+          Data Response
+               ↓
+        React.js UI Update
+2. MongoDB
+
+MongoDB is a NoSQL document-oriented database.
+
+Unlike traditional relational databases such as MySQL, MongoDB stores data in documents rather than rows and tables.
+
+Example MongoDB document
+{
+  "name": "Sushil Kumar",
+  "email": "sushil@example.com",
+  "course": "Computer Engineering",
+  "skills": ["React", "Node.js", "MongoDB"]
+}
+
+MongoDB concepts:
+
+MongoDB
+   ↓
+Database
+   ↓
+Collection
+   ↓
+Documents
+   ↓
+Fields
+Example
+KrishakSarathiDB
+       ↓
+     users
+       ↓
+  ┌───────────────┐
+  │ User Document │
+  ├───────────────┤
+  │ name          │
+  │ email         │
+  │ password      │
+  └───────────────┘
+Advantages
+Flexible schema
+JSON-like documents
+Easy integration with JavaScript
+Scalable
+Good for modern web applications
+3. Express.js
+
+Express.js is a lightweight Node.js web framework.
+
+It is mainly used to create:
+
+REST APIs
+Routes
+Middleware
+Authentication
+Request/response handling
+Example
+const express = require("express");
+
+const app = express();
+
+app.get("/", (req, res) => {
+    res.send("Hello MERN!");
+});
+
+app.listen(5000, () => {
+    console.log("Server running on port 5000");
+});
+
+If the browser sends:
+
+GET /users
+
+Express can handle it:
+
+app.get("/users", (req, res) => {
+    res.json({
+        message: "Users fetched successfully"
+    });
+});
+4. Node.js
+
+Node.js is a JavaScript runtime environment.
+
+Normally, JavaScript runs in the browser.
+
+With Node.js, JavaScript can also run on the server.
+
+Before Node.js:
+
+JavaScript → Browser
+
+
+With Node.js:
+
+JavaScript → Server
+
+Node.js is commonly used for:
+
+Backend development
+REST APIs
+Web servers
+Real-time applications
+Authentication
+Database communication
+Example
+console.log("Hello from Node.js");
+
+Run:
+
+node app.js
+5. React.js
+
+React.js is a JavaScript library used to create the frontend/user interface.
+
+React applications are built using components.
+
+Example component
+function Welcome() {
+    return <h1>Welcome to MERN Stack</h1>;
+}
+
+export default Welcome;
+
+A large application can be divided into components:
+
+App
+│
+├── Header
+├── Navbar
+├── HeroSection
+├── Login
+├── Dashboard
+├── Profile
+└── Footer
+Important React concepts
+
+You should learn:
+
+Components
+JSX
+Props
+State
+Hooks
+Events
+Forms
+Conditional rendering
+Lists
+React Router
+API integration
+Context API
+
+7. MERN Architecture
+
+A typical MERN application has three major layers:
+
+┌──────────────────────────────┐
+│       PRESENTATION LAYER     │
+│           React.js           │
+└──────────────┬───────────────┘
+               │
+             HTTP
+               │
+┌──────────────▼───────────────┐
+│        APPLICATION LAYER     │
+│      Node.js + Express.js    │
+│                              │
+│  Routes → Controllers → Logic│
+└──────────────┬───────────────┘
+               │
+             Query
+               │
+┌──────────────▼───────────────┐
+│           DATA LAYER         │
+│           MongoDB            │
+└──────────────────────────────┘
+
+8. Frontend vs Backend
+Frontend
+
+The frontend is what the user sees and interacts with.
+
+Technologies:
+
+React.js
+HTML
+CSS
+JavaScript
+Bootstrap / Tailwind CSS
+
+Examples:
+
+Login page
+Registration page
+Dashboard
+Buttons
+Forms
+Navigation bar
+Backend
+
+The backend handles the application's logic.
+
+Technologies:
+
+Node.js
+Express.js
+MongoDB
+JWT
+REST API
+
+Examples:
+
+Login authentication
+Database operations
+User registration
+Password validation
+API creation
+9. What is an API?
+
+API = Application Programming Interface
+
+An API allows different parts of an application to communicate.
+
+For example:
+
+React
+  │
+  │ POST /api/login
+  ↓
+Express/Node
+  │
+  │ Check user
+  ↓
+MongoDB
+
+10. REST API in MERN
+
+Common HTTP methods:
+
+Method		Purpose				Example
+GET			Retrieve data		/api/users
+POST		Create data			/api/users
+PUT			Update data			/api/users/10
+PATCH		Partially update	/api/users/10
+DELETE		Delete data			/api/users/10
+
+11. Typical MERN Project Structure
+
+A basic MERN project can look like:
+
+my-mern-project/
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+│
+├── backend/
+│   ├── config/
+│   │   └── db.js
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   ├── .env
+│   └── package.json
+│
+└── README.md
